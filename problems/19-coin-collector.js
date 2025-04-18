@@ -25,12 +25,17 @@ Example 3:
 
 ***********************************************************************/
 function coinCollector(numCoins) {
-  // Your code here
+	// Your code here
+	const coins = [];
+	return (coin) => {
+		coins.push(coin);
+		if (coins.length === numCoins) return coins;
+	};
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = coinCollector;
+	module.exports = coinCollector;
 } catch (e) {
-  return null;
+	return null;
 }
