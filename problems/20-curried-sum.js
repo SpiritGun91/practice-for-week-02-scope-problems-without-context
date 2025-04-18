@@ -44,6 +44,12 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function curriedSum(numArgs) {
   // Your code here
+  const numbers = [];
+  return function curriedSum(coin) {
+    numbers.push(coin);
+    if (numbers.length === numArgs) return numbers.reduce((a, b) => a + b);
+    return curriedSum;
+  };
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
